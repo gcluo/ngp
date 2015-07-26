@@ -125,7 +125,7 @@
   //| ✓ server
   //'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   gulp.task('server', ['connect', 'sass', 'static'], function() {
-    $.shelljs.exec('open http://localhost:9000/app/');
+    $.shelljs.exec('open http://localhost:9000/app/main.html');
   });
 
   //|**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
