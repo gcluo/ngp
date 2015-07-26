@@ -1,0 +1,25 @@
+.home-menu-button{
+	position: relative;
+	display: block;
+	background-color: #FFF;
+	height: 5px;
+	width: 30px;
+	border-radius:3px;
+	top: 10px;
+	left: 10px;
+	&:before,&:after{
+		content:'';
+		position: absolute;
+		background-color: #FFF;
+		height: 5px;
+		width: 30px;
+		border-radius:3px;
+		left: 0;
+	}
+	&:before{
+		bottom: -10px;
+	}
+	&:after{
+		bottom: -20px;
+	}
+}
