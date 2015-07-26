@@ -5,7 +5,7 @@
         app:  'app', 
         dist: 'dist', 
         sass: 'sass',
-        tmpl: 'build/src',        
+        tmpl: 'src',        
         js:   'app/js',
         css:  'app/css',
         img:  'app/img'

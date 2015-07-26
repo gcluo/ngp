@@ -9,12 +9,12 @@
 
   app.config(["$routeProvider",function($routeProvider){
   	$routeProvider
-  		.when('/index',{
-  			templateUrl: "index.html",
-  			controller: 'indexController'
+  		.when('/home',{
+  			templateUrl: "home.html",
+  			controller: 'homeController'
   		})
   		.otherwise({
-        	redirectTo : '/index'
+        	redirectTo : '/home'
         });
   }]);
 
@@ -22,7 +22,7 @@
 
   }]);
 
-  app.controller("indexController",['$scope',function($scope){
+  app.controller("homeController",['$scope',function($scope){
   	$scope.text = 'my first controller';
   }]);
 
