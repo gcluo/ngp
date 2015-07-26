@@ -1,6 +1,12 @@
 <article ng-controller='mainController'>
 	<header class="home-header">
-		<a href="javascript:;" class="home-menu-button"></a>
+		<a href="javascript:;" ng-class="{'home-menu-button':menuBtnCls.initCls,'active':menuBtnCls.aftCls}" 
+		ng-click='showNav()'></a>
+<!-- 		<div ng-class="{'home-menu-button':menuBtnCls.initCls,'active':menuBtnCls.aftCls}">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div> -->
 	</header>
 	<div ng-bind="text"></div>
 </article>

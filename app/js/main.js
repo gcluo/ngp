@@ -24,6 +24,13 @@
 
   app.controller("homeController",['$scope',function($scope){
   	$scope.text = 'my first controller';
+  	$scope.menuBtnCls = {
+  		initCls:true,
+  		aftCls:false
+  	};
+  	$scope.showNav = function(){
+  		$scope.menuBtnCls.aftCls = true;
+  	};
   }]);
 
 

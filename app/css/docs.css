@@ -1,3 +1,73 @@
+@-webkit-keyframes home-berat {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@keyframes home-berat {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+}
+
+@-webkit-keyframes home-afrat {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+@keyframes home-afrat {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes home-disno {
+  from {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate(-30px);
+            transform: translate(-30px);
+  }
+}
+
+@keyframes home-disno {
+  from {
+    opacity: 1;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translate(-30px);
+            transform: translate(-30px);
+  }
+}
+
 .home-header {
   background-color: #FF5CD5;
   width: 100%;
@@ -11,8 +81,10 @@
   height: 5px;
   width: 30px;
   border-radius: 3px;
-  top: 10px;
+  top: 20px;
   left: 10px;
+  -webkit-transition: -webkit-transform 1s, background-color 1s;
+          transition: transform 1s, background-color 1s;
 }
 
 .home-menu-button:before, .home-menu-button:after {
@@ -23,14 +95,36 @@
   width: 30px;
   border-radius: 3px;
   left: 0;
+  -webkit-transition: -webkit-transform 1s;
+          transition: transform 1s;
 }
 
 .home-menu-button:before {
-  bottom: -10px;
+  bottom: 10px;
 }
 
 .home-menu-button:after {
-  bottom: -20px;
+  bottom: -10px;
+}
+
+.home-menu-button.active {
+  visibility: hidden;
+}
+
+.home-menu-button.active:before {
+  visibility: visible;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  bottom: 0;
+}
+
+.home-menu-button.active:after {
+  visibility: visible;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 0;
 }
 
 /*!

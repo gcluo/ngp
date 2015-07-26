@@ -1,3 +1,4 @@
+//home页面button
 .home-menu-button{
 	position: relative;
 	display: block;
@@ -5,8 +6,9 @@
 	height: 5px;
 	width: 30px;
 	border-radius:3px;
-	top: 10px;
+	top: 20px;
 	left: 10px;
+	transition:transform 1s,background-color 1s;
 	&:before,&:after{
 		content:'';
 		position: absolute;
@@ -15,11 +17,26 @@
 		width: 30px;
 		border-radius:3px;
 		left: 0;
+		transition: transform 1s;
 	}
 	&:before{
-		bottom: -10px;
+		bottom: 10px;
 	}
 	&:after{
-		bottom: -20px;
+		bottom: -10px;
+	}
+	//激活了按钮
+	&.active{
+		visibility: hidden;
+		&:before{
+			visibility: visible;
+			transform:rotate(45deg);
+			bottom: 0;
+		}
+		&:after{
+			visibility: visible;
+			transform:rotate(-45deg);
+			bottom: 0;
+		}
 	}
 }
