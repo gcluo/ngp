@@ -26,7 +26,8 @@
   	$scope.text = 'my first controller';
   	$scope.menuBtnCls = {
   		initCls:true,
-  		aftCls:false
+  		aftCls:false,
+  		colseCls:false
   	};
   	$scope.showNav = function(){
   		$scope.menuBtnCls.aftCls = true;

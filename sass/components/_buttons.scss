@@ -31,12 +31,13 @@
 		&:before{
 			visibility: visible;
 			transform:rotate(45deg);
-			bottom: 0;
+			transform-origin: 0px 1px;
 		}
 		&:after{
 			visibility: visible;
 			transform:rotate(-45deg);
-			bottom: 0;
+			transform-origin: 0px 4px;
+			// bottom: 0;
 		}
 	}
 }

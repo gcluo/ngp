@@ -116,7 +116,9 @@
   -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
-  bottom: 0;
+  -webkit-transform-origin: 0px 1px;
+      -ms-transform-origin: 0px 1px;
+          transform-origin: 0px 1px;
 }
 
 .home-menu-button.active:after {
@@ -124,7 +126,9 @@
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  bottom: 0;
+  -webkit-transform-origin: 0px 4px;
+      -ms-transform-origin: 0px 4px;
+          transform-origin: 0px 4px;
 }
 
 /*!
