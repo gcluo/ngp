@@ -72,6 +72,7 @@
   background-color: #FF5CD5;
   width: 100%;
   height: 50px;
+  position: relative;
 }
 
 .home-menu-button {
@@ -123,6 +124,70 @@
 
 .home-menu-button.active:after {
   visibility: visible;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform-origin: 0px 4px;
+      -ms-transform-origin: 0px 4px;
+          transform-origin: 0px 4px;
+}
+
+.burger {
+  width: 33px;
+  height: 25px;
+  position: absolute;
+  top: 13px;
+  left: 10px;
+}
+
+.burger span {
+  position: absolute;
+  display: block;
+  height: 5px;
+  width: 30px;
+  background-color: #FFF;
+  border-radius: 3px;
+  left: 0;
+  -webkit-transition: -webkit-transform 1s, background-color 1s, display 1s;
+          transition: transform 1s, background-color 1s, display 1s;
+}
+
+.burger > span:nth-child(1) {
+  top: 0;
+}
+
+.burger > span:nth-child(2) {
+  top: 10px;
+}
+
+.burger > span:nth-child(3) {
+  top: 20px;
+}
+
+.burger:hover span {
+  background-color: #484B47;
+  -webkit-transform: translateX(3px);
+      -ms-transform: translateX(3px);
+          transform: translateX(3px);
+}
+
+.burger.active > span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform-origin: 0px 1px;
+      -ms-transform-origin: 0px 1px;
+          transform-origin: 0px 1px;
+}
+
+.burger.active > span:nth-child(2) {
+  -webkit-transform: translateX(30px);
+      -ms-transform: translateX(30px);
+          transform: translateX(30px);
+  display: none;
+}
+
+.burger.active > span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);

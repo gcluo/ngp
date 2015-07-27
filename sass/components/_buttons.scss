@@ -41,3 +41,57 @@
 		}
 	}
 }
+
+//汉堡堡按钮
+.burger{
+	width: 33px;
+	height: 25px;
+	position: absolute;
+	top: 13px;
+	left: 10px;
+	span{
+		position: absolute;
+		display: block;
+		height: 5px;
+		width: 30px;
+		background-color: #FFF;
+		border-radius:3px;
+		left:0;
+		transition:transform 1s,background-color 1s,display 1s;;
+	}
+	&>span:nth-child(1){
+		top:0;
+	}
+	&>span:nth-child(2){
+		top: 10px;
+	}
+	&>span:nth-child(3){
+		top: 20px;
+	}
+	&:hover span{
+		background-color: #484B47;
+		transform:translateX(3px);
+	}
+	&.active{
+		&>span:nth-child(1){
+			transform:rotate(45deg);
+			transform-origin: 0px 1px;
+		}
+		&>span:nth-child(2){
+			transform:translateX(30px);
+			display:none;
+		}
+		&>span:nth-child(3){
+			transform:rotate(-45deg);
+			transform-origin: 0px 4px;
+		}
+	}
+}
+
+
+
+
+
+
+
+

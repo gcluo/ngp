@@ -26,11 +26,10 @@
   	$scope.text = 'my first controller';
   	$scope.menuBtnCls = {
   		initCls:true,
-  		aftCls:false,
-  		colseCls:false
+  		actCls:false
   	};
   	$scope.showNav = function(){
-  		$scope.menuBtnCls.aftCls = true;
+  		$scope.menuBtnCls.actCls = !$scope.menuBtnCls.actCls;
   	};
   }]);
 
