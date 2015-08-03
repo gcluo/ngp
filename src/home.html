@@ -1,7 +1,14 @@
 <article ng-controller='mainController'>
+	<nav>
+		<ul ng-class="{'nav nav-pills nav-stacked':true}">
+			<li role="presentation" ng-class="{'active':true}"><a href="">list1</a></li>
+			<li role="presentation"><a href="">list2</a></li>
+			<li role="presentation"><a href="">list3</a></li>
+			<li role="presentation"><a href="">list4</a></li>
+			<li role="presentation"><a href="">list5</a></li>
+		</ul>
+	</nav>
 	<header class="home-header">
-		<!-- <a href="javascript:;" ng-class="{'home-menu-button':menuBtnCls.initCls,'active':menuBtnCls.aftCls，'close':menuBtnCls.colseCls}" 
-		ng-click='showNav()'></a> -->
 		<div ng-class="{'burger':menuBtnCls.initCls,'active':menuBtnCls.actCls}" ng-click='showNav()'>
 			<span></span>
 			<span></span>

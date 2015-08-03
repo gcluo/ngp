@@ -1,47 +1,3 @@
-//home页面button
-.home-menu-button{
-	position: relative;
-	display: block;
-	background-color: #FFF;
-	height: 5px;
-	width: 30px;
-	border-radius:3px;
-	top: 20px;
-	left: 10px;
-	transition:transform 1s,background-color 1s;
-	&:before,&:after{
-		content:'';
-		position: absolute;
-		background-color: #FFF;
-		height: 5px;
-		width: 30px;
-		border-radius:3px;
-		left: 0;
-		transition: transform 1s;
-	}
-	&:before{
-		bottom: 10px;
-	}
-	&:after{
-		bottom: -10px;
-	}
-	//激活了按钮
-	&.active{
-		visibility: hidden;
-		&:before{
-			visibility: visible;
-			transform:rotate(45deg);
-			transform-origin: 0px 1px;
-		}
-		&:after{
-			visibility: visible;
-			transform:rotate(-45deg);
-			transform-origin: 0px 4px;
-			// bottom: 0;
-		}
-	}
-}
-
 //汉堡堡按钮
 .burger{
 	width: 33px;
@@ -57,7 +13,7 @@
 		background-color: #FFF;
 		border-radius:3px;
 		left:0;
-		transition:transform 1s,background-color 1s,display 1s;;
+		transition:transform 1s,background-color 1s,opacity 0.5s;;
 	}
 	&>span:nth-child(1){
 		top:0;
@@ -78,8 +34,8 @@
 			transform-origin: 0px 1px;
 		}
 		&>span:nth-child(2){
-			transform:translateX(30px);
-			display:none;
+			transform:translateX(-10px);
+			opacity:0;
 		}
 		&>span:nth-child(3){
 			transform:rotate(-45deg);

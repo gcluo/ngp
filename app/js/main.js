@@ -7,6 +7,7 @@
 
   var app = angular.module("myApp",["ngRoute","ngAnimate","ngResource"]);
 
+
   app.config(["$routeProvider",function($routeProvider){
   	$routeProvider
   		.when('/home',{
@@ -14,7 +15,7 @@
   			controller: 'homeController'
   		})
   		.otherwise({
-        	redirectTo : '/home'
+        	// redirectTo : '/main'
         });
   }]);
 

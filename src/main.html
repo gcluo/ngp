@@ -2,7 +2,23 @@
 <html ng-app="myApp">
   @@include('./partial/head.html')
   <body>
+  	<nav class="nav-position">
+		<ul ng-class="{'nav nav-pills nav-stacked':true}">
+			<li role="presentation" ng-class="{'active':true}"><a href="">list1</a></li>
+			<li role="presentation"><a href="">list2</a></li>
+			<li role="presentation"><a href="">list3</a></li>
+			<li role="presentation"><a href="">list4</a></li>
+			<li role="presentation"><a href="">list5</a></li>
+		</ul>
+	</nav>
   	<main ng-controller="mainController">
+  		<header class="home-header" ng-controller='homeController'>
+	  		<div ng-class="{'burger':menuBtnCls.initCls,'active':menuBtnCls.actCls}" ng-click='showNav()'>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+	  	</header>
   		<div ng-view></div>
   	</main>
     @@include('./partial/footer.html')

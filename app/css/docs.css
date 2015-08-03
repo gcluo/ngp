@@ -70,66 +70,17 @@
 
 .home-header {
   background-color: #FF5CD5;
-  width: 100%;
   height: 50px;
   position: relative;
 }
 
-.home-menu-button {
-  position: relative;
-  display: block;
-  background-color: #FFF;
-  height: 5px;
-  width: 30px;
-  border-radius: 3px;
-  top: 20px;
-  left: 10px;
-  -webkit-transition: -webkit-transform 1s, background-color 1s;
-          transition: transform 1s, background-color 1s;
-}
-
-.home-menu-button:before, .home-menu-button:after {
-  content: '';
+.nav-position {
   position: absolute;
-  background-color: #FFF;
-  height: 5px;
-  width: 30px;
-  border-radius: 3px;
-  left: 0;
-  -webkit-transition: -webkit-transform 1s;
-          transition: transform 1s;
-}
-
-.home-menu-button:before {
-  bottom: 10px;
-}
-
-.home-menu-button:after {
-  bottom: -10px;
-}
-
-.home-menu-button.active {
-  visibility: hidden;
-}
-
-.home-menu-button.active:before {
-  visibility: visible;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  -webkit-transform-origin: 0px 1px;
-      -ms-transform-origin: 0px 1px;
-          transform-origin: 0px 1px;
-}
-
-.home-menu-button.active:after {
-  visibility: visible;
-  -webkit-transform: rotate(-45deg);
-      -ms-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  -webkit-transform-origin: 0px 4px;
-      -ms-transform-origin: 0px 4px;
-          transform-origin: 0px 4px;
+  width: 25%;
+  left: -25%;
+  top: 0;
+  height: 100%;
+  background-color: #ff0;
 }
 
 .burger {
@@ -148,8 +99,8 @@
   background-color: #FFF;
   border-radius: 3px;
   left: 0;
-  -webkit-transition: -webkit-transform 1s, background-color 1s, display 1s;
-          transition: transform 1s, background-color 1s, display 1s;
+  -webkit-transition: -webkit-transform 1s, background-color 1s, opacity 0.5s;
+          transition: transform 1s, background-color 1s, opacity 0.5s;
 }
 
 .burger > span:nth-child(1) {
@@ -181,10 +132,10 @@
 }
 
 .burger.active > span:nth-child(2) {
-  -webkit-transform: translateX(30px);
-      -ms-transform: translateX(30px);
-          transform: translateX(30px);
-  display: none;
+  -webkit-transform: translateX(-10px);
+      -ms-transform: translateX(-10px);
+          transform: translateX(-10px);
+  opacity: 0;
 }
 
 .burger.active > span:nth-child(3) {
