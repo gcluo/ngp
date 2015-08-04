@@ -1,8 +1,4 @@
-.home-header{
-	background-color: #FF5CD5;
-	height: 50px;
-	position: relative;
-}
+//main页面的nav
 .nav-position{
 	position: absolute;
 	width: 25%;
@@ -10,4 +6,8 @@
 	top:0;
 	height: 100%;
 	background-color: #ff0;
+	transition:transform 1s;
+	&.show{
+		transform:translateX(100%);
+	}
 }
