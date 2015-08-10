@@ -2,17 +2,20 @@
 <html ng-app="myApp">
   @@include('./partial/head.html')
   <body>
-  	<nav class="nav-position" ng-class="{'show':navShow}">
+  	<nav class="nav-position" ng-class="{'show':navShow}" ng-controller="navController">
 		<ul ng-class="{'nav nav-pills nav-stacked':true}">
-			<li role="presentation"><a href="list1">list1</a></li>
+			<!-- <li role="presentation"><a href="list1">list1</a></li>
 			<li role="presentation"><a href="list2">list2</a></li>
 			<li role="presentation"><a href="list3">list3</a></li>
 			<li role="presentation"><a href="list4">list4</a></li>
-			<li role="presentation"><a href="list5">list5</a></li>
+			<li role="presentation"><a href="list5">list5</a></li> -->
+			<li ng-repeat="section in sections" ng-class="{active : isSelected(section)}">
+            	<a ng-click="setMaster(section)" ng-href="{{section.link}}">{{section.name}}</a>
+        	</li>
 		</ul>
 	</nav>
   	<main ng-controller="mainController" ng-class="{'nor':true,'move':mainMove}">
-  		<header class="home-header" ng-controller='homeController'>
+  		<header class="home-header">
 	  		<div ng-class="{'burger':true,'active':menuBtnCls.actCls}" ng-click='showNav()'>
 				<span></span>
 				<span></span>
